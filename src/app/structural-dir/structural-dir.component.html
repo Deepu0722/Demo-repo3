@@ -1,0 +1,30 @@
+<div>
+<p>structural-dir works!</p>
+<h1 *ngIf="strVal; else elseBlock;">ngIf Block Inline</h1>
+<ng-template #elseBlock>
+    <h1>ngIf else Block</h1>
+</ng-template>
+
+<h1> ngIf Directive ifelse template</h1>
+<h1 *ngIf="strVal;then ifBlock; else elseBlock;">ngIf Block</h1>
+<ng-template #ifBlock>
+    <h1>ng If block</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>ngIf else Block</h1>
+</ng-template>
+</div>
+<div> ngSwitch
+   <div [ngSwitch]="conditionalVal">
+        <div *ngSwitchCase= "'red'"> Red Switch</div>
+        <div *ngSwitchCase="'green'"> green Switch</div>
+        <div *ngSwitchDefault="'yellow'"> default Case</div>
+   </div>    
+</div>
+<div> ngFor
+    <div *ngFor="let color of colors; index as i">
+        <h1>{{i}}{{color}}</h1>
+    </div>
+
+</div>
+

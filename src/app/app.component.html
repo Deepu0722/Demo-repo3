@@ -1,0 +1,11 @@
+<div> {{title | toupper}} Wellcome {{ipval.value}}
+<button (click)= "clickEventHandler()"> Get</button>
+<button (click)= "clickPostEventHandler()"> Post</button>
+<button (click)= "deleteEventHandler()"> Delete</button>
+<input #ipval (keydown)= "clickEventHandler()" [(ngModel)]= "title" />
+<input #ipval2 />
+<button (click)="refHandler(ipval2.value)">Reference Value</button>
+<h1>{{chEvent}}</h1>
+<app-basic-ang  (childEvent)="chEvent=$event" [parentData]="greetChild"> </app-basic-ang>
+<app-structural-dir></app-structural-dir>
+</div>
